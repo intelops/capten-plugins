@@ -1,0 +1,13 @@
+deployment:
+  controlplaneCluster:
+    chartName: "crossplane"
+    chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
+    version: "v1.0.3"
+    defaultNamespace: "crossplane-system"
+    privilegedNamespace: true
+    valuesFile: "values.yaml"
+apiEndpoint: https://crossplane.{{.DomainName}}
+capabilities:
+  - deploy-controlplane-cluster
+  - capten-sdk
+  - vault-store

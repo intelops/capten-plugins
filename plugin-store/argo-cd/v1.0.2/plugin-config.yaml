@@ -1,0 +1,14 @@
+deployment:
+  controlplaneCluster:
+    chartName: "argo-cd"
+    chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
+    version: "v1.0.2"
+    defaultNamespace: "argo-cd"
+    privilegedNamespace: false
+    valuesFile: "values.yaml"
+apiEndpoint: https://argo.{{.DomainName}}
+uiEndpoint: https://argo.{{.DomainName}}
+capabilities:
+  - deploy-controlplane-cluster
+  - capten-sdk
+  - ui-sso-oauth

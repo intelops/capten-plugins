@@ -1,0 +1,13 @@
+deployment:
+  controlplaneCluster:
+    chartName: "tekton"
+    chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
+    version: "v0.1.9"
+    defaultNamespace: "tekton"
+    privilegedNamespace: false
+    valuesFile: "values.yaml"
+apiEndpoint: https://tekton.{{.DomainName}}
+capabilities:
+  - deploy-controlplane-cluster
+  - capten-sdk
+  - vault-store
