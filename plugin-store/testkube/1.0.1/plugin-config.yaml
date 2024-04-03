@@ -1,0 +1,11 @@
+deployment:
+  controlplaneCluster:
+    chartName: "testkube"
+    chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
+    version: "1.0.1"
+    defaultNamespace: "testkube"
+    privilegedNamespace: false
+    valuesFile: "values.yaml"
+capabilities:
+  - deploy-controlplane-cluster
+  - capten-sdk

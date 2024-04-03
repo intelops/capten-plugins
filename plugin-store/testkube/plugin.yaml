@@ -1,13 +1,5 @@
 pluginName: "testkube"
 description: "Test Kube Application"
 category: "Testing framework"
-deploymentConfig:
-  chartName: "testkube"
-  chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
-  versions:
-    - "1.0.1"
-  defaultNamespace: "testkube"
-  privilegedNamespace: false
-pluginConfig:
-  capabilities:
-    - capten-sdk
+versions:
+  - "1.0.1"

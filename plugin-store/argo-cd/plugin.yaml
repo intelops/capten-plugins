@@ -2,16 +2,5 @@ pluginName: "argo-cd"
 description: "GitOps continuous delivery tool for Kubernetes"
 category: "CI/CD"
 icon: "argocd.svg"
-deploymentConfig:
-  chartName: "argo-cd"
-  chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
-  versions:
-    - "v1.0.2"
-  defaultNamespace: "argo-cd"
-  privilegedNamespace: false
-pluginConfig:
-  apiEndpoint: https://argo.{{.DomainName}}
-  uiEndpoint: https://argo.{{.DomainName}}
-  capabilities:
-    - capten-sdk
-    - ui-sso-oauth
+versions:
+  - "v1.0.2"
