@@ -130,20 +130,49 @@ Merge all plugin configuration files into capten plugin store Git repository
 Depoly Plugin application on Capten cluster from Intelops UI(https://alpha.intelops.app/)
 
 #1 Login to Intelops UI
-#2 Navigate to plugin store page
-#3 Synchronize the plugin store
-#3 Click on Deploy plugin application, Select plugin version and click on Deploy button
+
+![Inteloops-Login-UI](.readme_assets/itelops-login-ui.png)
+
+#2 Navigate to "Controlplance Cluster" -> Select the cluster -> Select "Application Store"
+
+![Plugin-Application-Store](.readme_assets/plugin-store-apps.png)
+
+#3 Select "Configure Apps Store" and click on "sync' button to Synchronize the plugin store
+
+![Syncronize-Plugin-Application-Store](.readme_assets/synchronize_plugin_apps.png)
+
+#4 Click on Deploy plugin application, Select plugin version and click on Deploy button
+
+![Plugin-Application-Deploy](.readme_assets/plugin-app-deploy.png)
 
 ### Capten Pluguin Resources
 
-Capten SDK creates resources for plugin application for plugin configured capabilities before deploying plugin application to Capten cluster
+Capten SDK creates resources for plugin application for the configured capabilities before deploying plugin application to Capten cluster
 
 ```
-
+List of supported capabilities:
+- MTLS Certificates
+- Vault Role
+- Postgres DB setup
 ```
 
 ## Plugin Application UI launch
 
+- Plugin application UI can be launched directly from icons shortcut in cluster widget.
+
+![Plugin-Application-UI-Launch](.readme_assets/plugin_app_ui_launch.png)
+
 ## Plugin Application Capten UI Widget
 
+- Navigate to "Capten" -> "Platform Engineering"
+- In this screen plugin application can be visualized.
+
+![Plugin-Application-UI-Widget](.readme_assets/plugin_app_widget.png)
+
 ## UnDepoly Plugin Application
+
+- Navigate to "Capten" -> "Controlplane Cluster" -> Select th cluster
+- Select the "Installed Apps" tab -> Select the Category. For example "CI/CD"
+- Click on "Undeploy" button to undeploy the plugin.
+
+![Plugin-Application-UI-Widget](.readme_assets/undeploy-plugin-applicaiton.png)
