@@ -145,16 +145,32 @@ Depoly Plugin application on Capten cluster from Intelops UI(https://alpha.intel
 
 ![Plugin-Application-Deploy](.readme_assets/plugin-app-deploy.png)
 
-### Capten Pluguin Resources
+### Capten Pluguin Resources/Environment
 
 Capten SDK creates resources for plugin application for the configured capabilities before deploying plugin application to Capten cluster
 
-```
 List of supported capabilities:
-- MTLS Certificates
-- Vault Role
-- Postgres DB setup
+
 ```
+- Capten SDK
+- Vault Store
+- Postgres Store
+```
+
+#### Capten SDK
+
+- This capability provides MTLS certificate for server and client authentications.
+- Plugin application uses client certificate to communicate with Capten agent.
+- Plugin application can server certificate to enable mtls for communication.
+
+#### Vault Store
+
+- This capability provides access to key secrets.
+
+#### Postgres Store
+
+- This capability provides postgres DB setup required for the plugin application.
+
 
 ## Plugin Application UI launch
 
