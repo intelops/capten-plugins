@@ -130,20 +130,67 @@ Merge all plugin configuration files into the capten plugin store Git repository
 Deploy Plugin application on Capten cluster from Intelops UI(https://alpha.intelops.app/)
 
 #1 Login to Intelops UI
-#2 Navigate to the plugin store page
-#3 Synchronize the plugin store
-#3 Click on Deploy plugin application, Select plugin version, and click on Deploy button
 
-### Capten Pluguin Resources
+![Inteloops-Login-UI](.readme_assets/itelops-login-ui.png)
 
+#2 Navigate to "Controlplance Cluster" -> Select the cluster -> Select "Application Store"
+=======
 Capten SDK creates resources for plugin applications for plugin-configured capabilities before deploying plugin applications to the Capten cluster.
 
-```
+![Plugin-Application-Store](.readme_assets/plugin-store-apps.png)
+
+#3 Select "Configure Apps Store" and click on "sync' button to Synchronize the plugin store
+
+![Syncronize-Plugin-Application-Store](.readme_assets/synchronize_plugin_apps.png)
+
+#4 Click on Deploy plugin application, Select plugin version and click on Deploy button
+
+![Plugin-Application-Deploy](.readme_assets/plugin-app-deploy.png)
+
+### Capten Pluguin Resources/Environment
+
+Capten SDK creates resources for plugin application for the configured capabilities before deploying plugin application to Capten cluster
+
+List of supported capabilities:
 
 ```
+- Capten SDK
+- Vault Store
+- Postgres Store
+```
+
+#### Capten SDK
+
+- This capability provides MTLS certificate for server and client authentications.
+- Plugin application uses client certificate to communicate with Capten agent.
+- Plugin application can server certificate to enable mtls for communication.
+
+#### Vault Store
+
+- This capability provides access to key secrets.
+
+#### Postgres Store
+
+- This capability provides postgres DB setup required for the plugin application.
+
 
 ## Plugin Application UI launch
 
+- Plugin application UI can be launched directly from icons shortcut in cluster widget.
+
+![Plugin-Application-UI-Launch](.readme_assets/plugin_app_ui_launch.png)
+
 ## Plugin Application Capten UI Widget
 
+- Navigate to "Capten" -> "Platform Engineering"
+- In this screen plugin application can be visualized.
+
+![Plugin-Application-UI-Widget](.readme_assets/plugin_app_widget.png)
+
 ## UnDepoly Plugin Application
+
+- Navigate to "Capten" -> "Controlplane Cluster" -> Select th cluster
+- Select the "Installed Apps" tab -> Select the Category. For example "CI/CD"
+- Click on "Undeploy" button to undeploy the plugin.
+
+![Plugin-Application-UI-Widget](.readme_assets/undeploy-plugin-applicaiton.png)
