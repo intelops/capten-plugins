@@ -6,7 +6,7 @@ Capten Plugin SDK to develop and deploy applications on Capten cluster
 
 ## Features
 
-- Onboard Plugin applications applications in to Capten Plugin Store
+- Onboard Plugin applications in to Capten Plugin Store
 - Deploy Plugin applications on Capten cluster
 - Deploy Plugin applications on Business cluster
 - Capten Cluster Storage service access for Plugin application
@@ -16,30 +16,30 @@ Capten Plugin SDK to develop and deploy applications on Capten cluster
 
 ## Capten Plugin Store
 
-Capten SDK provides a simple way to onboard Capten Plugin application in to Capten Plugin Store.
+Capten SDK provides a simple way to onboard the Capten Plugin Applications (Plugins or Plugin Apps) into the Capten Plugin Store.
 
 ### Central Plugin Store
 
-Intelops manages central plugin store Git repository (https://github.com/intelops/capten-plugin) to onboard and manage Capten Plugin applications. This is opensource repositry for Capten comminuty to onboard and manage Capten Plugin applications.
+Intelops manages the central plugin store Git repository (https://github.com/intelops/capten-plugin) to onboard and manage Capten Plugin applications. This is an open-source repository for the Capten community to onboard and manage Capten Plugin applications.
 
-Central Plugin Store default integrated with Capten Stack and Plugins available in Central Plugin Store will be available to deploy on Capten cluster from Intelops UI(https://alpha.intelops.app/).
+This Central Plugin Store is integrated with Capten Stack by default, and Plugins available in the Central Plugin Store can be deployed on the Capten cluster from the Capten UI.
 
 ### Local Plugin Store
 
-Capten SDK supports managing local plugin store Git repository, A Git repository need to be integrated in to Capten from Intelops UI(https://alpha.intelops.app/) and then it can be used to onboard and manage Capten Plugin applications.
+Capten SDK supports managing a local plugin store, i.e., in your Git repository. A Git repository needs to be integrated into the Capten from Capten UI, which can then be used to onboard and manage Plugin applications.
 
 ## Onboarding Plugin Application
 
-Pre-requisites to onboard Plugin Application in to Capten Plugin Store
+Pre-requisites to onboard Plugin Application into this Capten Plugin Store
 
 ### Prerequisites
 
 - Plugin Application available in helm repository accessible from Capten cluster
-- Container image for plugin application available in container registry onboarded in to Capten cluster
+- Container image for plugin application available in container registry onboarded into the Capten cluster
 
 ### Add Plugin Application name
 
-Add plugin application name in `plugin-store/plugin-list.yaml` file
+Add the plugin application name in `plugin-store/plugin-list.yaml` file
 
 ```
 plugins:
@@ -50,7 +50,7 @@ plugins:
 
 ### Add Plugin Application Configuration
 
-Create folder with pliugin name `plugin-store/<plugin-name>`, and add plugin metadata files
+Create a folder with plugin name `plugin-store/<plugin-name>`, and add plugin metadata files
 
 - Add plugin application configuration in `plugin-store/<plugin-name>/plugin-config.yaml` file
 - Add plugin application Icon file in `plugin-store/<plugin-name>/icon.svg`
@@ -75,7 +75,7 @@ versions:
 
 ### Add Plugin Application Version Deployment Configuration
 
-For each supported version, create version folder `plugin-store/<plugin-name>/<version>` and add plugin version deploymnet metadata files
+For each supported version, create version folder `plugin-store/<plugin-name>/<version>` and add plugin version deployment metadata files
 
 - add plugin application version deployment configuration in `plugin-store/<plugin-name>/<version>/plugin-config.yaml` file
 - add plugin application version values file in `plugin-store/<plugin-name>/<version>/values.yaml` file
@@ -89,7 +89,7 @@ For each supported version, create version folder `plugin-store/<plugin-name>/<v
 | defaultNamespace | Plugin application default namespace |
 | privilegedNamespace | Plugin application privileged namespace |
 | valuesFile | Plugin application values file |
-| apiEndpoint | Plugin application api endpoint |
+| apiEndpoint | Plugin application API endpoint |
 | uiEndpoint | Plugin application ui endpoint |
 | capabilities | Plugin application required capabilities |
 
@@ -123,17 +123,19 @@ capabilities:
 
 ### Publish Plugin Application
 
-Merge all plugin configuration files into capten plugin store Git repository
+Merge all plugin configuration files into the capten plugin store Git repository
 
 ## Depoly Plugin Application
 
-Depoly Plugin application on Capten cluster from Intelops UI(https://alpha.intelops.app/)
+Deploy Plugin application on Capten cluster from Intelops UI(https://alpha.intelops.app/)
 
 #1 Login to Intelops UI
 
 ![Inteloops-Login-UI](.readme_assets/itelops-login-ui.png)
 
 #2 Navigate to "Controlplance Cluster" -> Select the cluster -> Select "Application Store"
+=======
+Capten SDK creates resources for plugin applications for plugin-configured capabilities before deploying plugin applications to the Capten cluster.
 
 ![Plugin-Application-Store](.readme_assets/plugin-store-apps.png)
 
