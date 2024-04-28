@@ -1,0 +1,10 @@
+deployment:
+  controlplaneCluster:
+    chartName: "kyverno"
+    chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
+    version: "1.0.3"
+    defaultNamespace: "Observability"
+    privilegedNamespace: true
+    valuesFile: "values.yaml"
+capabilities:
+  - deploy-controlplane-cluster

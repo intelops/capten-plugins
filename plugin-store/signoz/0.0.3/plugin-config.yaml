@@ -1,0 +1,10 @@
+deployment:
+  controlplaneCluster:
+    chartName: "signoz"
+    chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
+    version: "0.0.3"
+    defaultNamespace: "observability"
+    privilegedNamespace: true
+    valuesFile: "values.yaml"
+capabilities:
+  - deploy-controlplane-cluster

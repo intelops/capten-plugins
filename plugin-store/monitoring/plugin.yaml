@@ -1,0 +1,6 @@
+pluginName: "monitoring"
+description: "monitoring"
+category: "observability"
+icon: ""
+versions:
+  - "0.1.18"

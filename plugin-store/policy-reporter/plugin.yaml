@@ -1,0 +1,6 @@
+pluginName: "policy-reporter"
+description: "Policy reporter"
+category: "Security"
+icon: ""
+versions:
+  - "0.0.1"

@@ -1,0 +1,10 @@
+deployment:
+  controlplaneCluster:
+    chartName: "monitoring"
+    chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
+    version: "0.1.18"
+    defaultNamespace: "observability"
+    privilegedNamespace: true
+    valuesFile: "values.yaml"
+capabilities:
+  - deploy-controlplane-cluster

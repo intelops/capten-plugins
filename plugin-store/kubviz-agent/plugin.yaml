@@ -1,0 +1,6 @@
+pluginName: "kubviz-agent"
+description: "kubviz agent"
+category: "Observability"
+icon: ""
+versions:
+  - "1.1.21"

@@ -1,0 +1,53 @@
+nats:
+  auth:
+    secret:
+      name: "{{ .natsTokenSecretName }}"
+      key: "token"
+git_bridge:
+  resources:
+    limits:
+      cpu: 200m
+      memory: 150Mi
+    requests:
+      cpu: 100m
+      memory: 100Mi
+  enabled: true
+  ingress:
+    hosts:
+      - host: "gitbridge.{{.DomainName}}"
+        paths:
+          - path: /
+            pathType: Prefix
+    tls:
+      - secretName: cert-gitbridge
+        hosts:
+          - "gitbridge.{{.DomainName}}"
+container_bridge:
+  resources:
+    limits:
+      cpu: 200m
+      memory: 150Mi
+    requests:
+      cpu: 100m
+      memory: 100Mi
+  enabled: true
+  ingress:
+    hosts:
+      - host: "containerbridge.{{.DomainName}}"
+        paths:
+          - path: /
+            pathType: Prefix
+    tls:
+      - secretName: cert-containerbridge
+        hosts:
+          - "containerbridge.{{.DomainName}}"
+kuberhealthy:
+  enabled: true
+clusterName: "capten-controlplane"
+resources:
+  limits:
+    cpu: 200m
+    memory: 150Mi
+  requests:
+    cpu: 100m
+    memory: 100Mi

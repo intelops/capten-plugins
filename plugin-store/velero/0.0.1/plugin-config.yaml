@@ -1,0 +1,10 @@
+deployment:
+  controlplaneCluster:
+    chartName: "velero"
+    chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
+    version: "0.0.4"
+    defaultNamespace: "velero"
+    privilegedNamespace: true
+    valuesFile: "values.yaml"
+capabilities:
+  - deploy-controlplane-cluster

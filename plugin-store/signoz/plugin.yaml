@@ -1,0 +1,6 @@
+pluginName: "signoz"
+description: "signoz"
+category: "Observability"
+icon: "signoz.svg"
+versions:
+  - "0.0.1"

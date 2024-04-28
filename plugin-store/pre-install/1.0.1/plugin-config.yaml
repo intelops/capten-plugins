@@ -1,0 +1,10 @@
+deployment:
+  controlplaneCluster:
+    chartName: "pre-install"
+    chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
+    version: "1.0.1"
+    defaultNamespace: "observability"
+    privilegedNamespace: true
+    valuesFile: "values.yaml"
+capabilities:
+  - deploy-controlplane-cluster

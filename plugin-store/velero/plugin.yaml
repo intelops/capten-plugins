@@ -1,0 +1,6 @@
+pluginName: "velero"
+description: "Backup and Restore tool for Kubernetes"
+category: "Backup"
+icon: ""
+versions:
+  - "0.0.1"

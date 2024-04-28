@@ -1,0 +1,11 @@
+deployment:
+  controlplaneCluster:
+    appName: "kubescape"
+    chartName: "kubescape-prometheus-integrator"
+    chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
+    version: "0.0.4"
+    defaultNamespace: "kubescape-prometheus"
+    privilegedNamespace: true
+    valuesFile: "values.yaml"
+capabilities:
+  - deploy-controlplane-cluster

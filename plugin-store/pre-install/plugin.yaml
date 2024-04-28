@@ -1,0 +1,6 @@
+pluginName: "pre-install"
+description: "pre-install"
+category: "Platform"
+icon: ""
+versions:
+  - "1.0.1"

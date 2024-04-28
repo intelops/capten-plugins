@@ -1,0 +1,6 @@
+pluginName: "kyverno"
+description: "Policy engine designed for Kubernetes"
+category: "Observability"
+icon: ""
+versions:
+  - "1.0.3"

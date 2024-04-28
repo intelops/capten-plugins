@@ -1,0 +1,10 @@
+deployment:
+  controlplaneCluster:
+    chartName: "falco"
+    chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
+    version: "0.0.1"
+    defaultNamespace: "falco"
+    privilegedNamespace: true
+    valuesFile: "values.yaml"
+capabilities:
+  - deploy-controlplane-cluster

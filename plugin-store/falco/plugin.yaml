@@ -1,0 +1,6 @@
+pluginName: "falco"
+description: "Cloud-native security tool for Kubernetes"
+category: "Security"
+icon: ""
+versions:
+  - "0.0.1"
