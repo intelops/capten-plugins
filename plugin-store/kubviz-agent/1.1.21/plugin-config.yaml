@@ -9,3 +9,4 @@ deployment:
     valuesFile: "values.yaml"
 capabilities:
   - deploy-controlplane-cluster
+  - generate-credentials
