@@ -1,0 +1,6 @@
+pluginName: "prometheus"
+description: "Monitoring tool for Kubernetes"
+category: "Observability"
+icon: "grafana.svg"
+versions:
+  - "1.0.10"

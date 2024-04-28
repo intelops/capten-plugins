@@ -1,0 +1,6 @@
+pluginName: "proact"
+description: "proact-scheduler"
+category: "Platform"
+icon: ""
+versions:
+  - "0.1.2"

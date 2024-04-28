@@ -1,0 +1,6 @@
+pluginName: "kubviz-client"
+description: "kubviz client"
+category: "Observability"
+icon: ""
+versions:
+  - "1.1.26"

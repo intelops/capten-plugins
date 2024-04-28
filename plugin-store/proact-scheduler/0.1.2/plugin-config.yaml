@@ -1,0 +1,12 @@
+deployment:
+  controlplaneCluster:
+    appName: "proact"
+    chartName: "proact-scheduler"
+    chartRepo: "https://intelops.github.io/proact-scheduler"
+    version: "0.1.2"
+    defaultNamespace: "capten"
+    privilegedNamespace: true
+    valuesFile: "values.yaml"
+apiEndpoint: https://proact-scheduler.{{.DomainName}}
+capabilities:
+  - deploy-controlplane-cluster

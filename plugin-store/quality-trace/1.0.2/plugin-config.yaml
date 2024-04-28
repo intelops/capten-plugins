@@ -1,0 +1,11 @@
+deployment:
+  controlplaneCluster:
+    chartName: "quality-trace"
+    chartRepo: "https://intelops.github.io/quality-trace"
+    version: "1.0.2"
+    defaultNamespace: "quality-trace"
+    privilegedNamespace: true
+    valuesFile: "values.yaml"
+apiEndpoint: https://quality-trace.{{.DomainName}}
+capabilities:
+  - deploy-controlplane-cluster

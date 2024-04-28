@@ -1,0 +1,10 @@
+deployment:
+  controlplaneCluster:
+    chartName: "policy-reporter"
+    chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
+    version: "0.0.1"
+    defaultNamespace: "policy-reporter"
+    privilegedNamespace: true
+    valuesFile: "values.yaml"
+capabilities:
+  - deploy-controlplane-cluster

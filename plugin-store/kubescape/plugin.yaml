@@ -1,0 +1,6 @@
+pluginName: "kubescape"
+description: "Cloud-native security tool for Kubernetes"
+category: "Observability"
+icon: ""
+versions:
+  - "0.0.4"

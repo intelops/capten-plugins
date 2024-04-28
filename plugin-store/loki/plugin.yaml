@@ -1,0 +1,6 @@
+pluginName: "loki"
+description: "Log aggregation system for Kubernetes"
+category: "Observability"
+icon: ""
+versions:
+  - "0.0.3"

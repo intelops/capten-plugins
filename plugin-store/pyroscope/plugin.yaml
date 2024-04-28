@@ -1,0 +1,6 @@
+pluginName: "pyroscope"
+description: "Continuous profiling tool for Kubernetes"
+category: "Observability"
+icon: ""
+versions:
+  - "1.0.0"

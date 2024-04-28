@@ -1,0 +1,13 @@
+deployment:
+  controlplaneCluster:
+    appName: "prometheus"
+    chartName: "kube-prometheus-stack"
+    chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
+    version: "1.0.10"
+    defaultNamespace: "observability"
+    privilegedNamespace: true
+    valuesFile: "values.yaml"
+apiEndpoint: https://prometheus.{{.DomainName}}
+uiEndpoint: https://grafana.{{.DomainName}}/login/generic_oauth
+capabilities:
+  - deploy-controlplane-cluster

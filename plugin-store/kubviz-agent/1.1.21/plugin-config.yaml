@@ -1,0 +1,11 @@
+deployment:
+  controlplaneCluster:
+    appName: "kubviz-agent"
+    chartName: "agent"
+    chartRepo: "https://intelops.github.io/kubviz/"
+    version: "1.1.21"
+    defaultNamespace: "observability"
+    privilegedNamespace: true
+    valuesFile: "values.yaml"
+capabilities:
+  - deploy-controlplane-cluster

@@ -1,0 +1,6 @@
+pluginName: "quality-trace"
+description: "quality trace"
+category: "Observability"
+icon: ""
+versions:
+  - "1.0.2"

@@ -1,0 +1,40 @@
+initContainers:
+  - name: velero-plugin-for-csi
+    image: ghcr.io/kube-tarian/helmrepo-supporting-tools/velero-plugin-for-csi:v0.5.0
+    imagePullPolicy: IfNotPresent
+    volumeMounts:
+      - mountPath: /target
+        name: plugins
+  - name: velero-plugin-for-aws
+    image: ghcr.io/kube-tarian/helmrepo-supporting-tools/velero-plugin-for-aws:v1.7.0
+    imagePullPolicy: IfNotPresent
+    volumeMounts:
+      - mountPath: /target
+        name: plugins
+  - name: openebs-velero-plugin
+    image: ghcr.io/kube-tarian/helmrepo-supporting-tools/velero-plugin:latest
+    imagePullPolicy: IfNotPresent
+    volumeMounts:
+      - mountPath: /target
+        name: plugins
+configuration:
+  features: EnableCSI
+  defaultVolumesToFsBackup: true
+  backupStorageLocation:
+    - name:
+      provider: aws
+      bucket: velero-backup
+      config:
+        region: west
+  volumeSnapshotLocation:
+    - name:
+      provider: aws
+      config:
+        region: west
+credentials:
+  secretContents:
+    cloud: |
+      [default]
+      aws_access_key_id=xxxyyy
+      aws_secret_access_key=yyyzzz
+deployNodeAgent: false

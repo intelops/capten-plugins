@@ -1,0 +1,10 @@
+deployment:
+  controlplaneCluster:
+    chartName: "pyroscope"
+    chartRepo: "https://kube-tarian.github.io/helmrepo-supporting-tools"
+    version: "1.0.0"
+    defaultNamespace: "observability"
+    privilegedNamespace: true
+    valuesFile: "values.yaml"
+capabilities:
+  - deploy-controlplane-cluster

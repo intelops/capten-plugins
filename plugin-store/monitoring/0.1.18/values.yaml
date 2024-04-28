@@ -1,0 +1,18 @@
+{{if eq .SocialIntegration "slack"}}
+slack:
+  enabled: true
+  webhook: "{{.SlackURL}}"
+  channel: "{{.SlackChannel}}"
+{{else if eq .SocialIntegration "teams"}}
+prometheus-msteams:
+  enabled: true
+  resources: 
+    requests:
+      cpu: 100m
+      memory: 100Mi
+    limits:
+      cpu: 200m
+      memory: 150Mi
+  connectors:
+  - alert: "{{.TeamsURL}}"
+{{end}}
